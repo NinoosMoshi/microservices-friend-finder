@@ -1,0 +1,503 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#base-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.8fr 0.8fr auto 0.8fr;
+    grid-template-columns: 1.5fr 2.7fr 1.5fr;
+    grid-template-areas:
+                    "header     header     header"
+                    "left-side  publish    right-side"
+                    "left-side  main       right-side"
+                    "footer     footer     footer";
+}
+
+#left-side ,#publish, #right-side{
+  margin-top: 70px;
+}
+
+#header{
+  grid-area: header;
+  padding-top: 10px;
+}
+
+#left-side{
+  margin-left: 30px;
+  grid-area: left-side;
+  position: relative;
+}
+
+#publish{
+  grid-area: publish;
+  margin-left: 65px;
+}
+
+
+#main {
+   grid-area: main;
+}
+
+#right-side {
+  margin-right: 30px;
+  grid-area: right-side;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+
+/* start navbar  */
+.start-nav {
+  margin: auto;
+}
+
+.navbar-toggler{
+  margin: 0 0px 0 120px;
+}
+
+form .form-group input.form-control{
+  background: rgba(255,255,255, 0.2);
+  border: 0;
+  box-shadow: none;
+  min-width: 235px;
+  color: #fff;
+  height: 26px;
+  border-radius: 13px;
+  font-size: 12px;
+  padding-left: 30px;
+}
+
+.form-group {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+  }
+
+.fa-search {
+    position: absolute;
+    top: 6px;
+    left: 11px;
+    color: rgba(255,255,255, 0.2);
+  }
+
+/* end navbar */
+
+/* .................................................................................................................. */
+
+
+/*............................................start left side............................................................*/
+/*1- start left side (photo-card)*/
+.profile-card{
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8)), url(./assets/images/covers/1.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  min-height: 90px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.profile-card a {
+  text-decoration: none;
+}
+
+.profile-card img.profile-photo{
+  border: 7px solid #fff;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: -30px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+/* end left side (photo-card)*/
+
+/*2- start left side (feed)*/
+.feed {
+  margin-top: 130px;
+}
+
+.feed ul {
+  list-style: none;
+}
+
+.feed ul li {
+  padding-bottom: 25px;
+}
+
+.feed ul li i {
+  margin-right: 10px;
+}
+
+ul.nav-news-feed i.fa-newspaper{color: #8dc63f;}
+
+ul.nav-news-feed i.fa-user{color: #662d91;}
+
+ul.nav-news-feed i.fa-users{color: #ee2a7b;}
+
+ul.nav-news-feed i.fa-envelope{color: #f7941e;}
+
+ul.nav-news-feed i.fa-image{color: #1c75bc;}
+
+ul.nav-news-feed i.fa-video-camera{color: #9e1f63;}
+/* end left side (feed)*/
+
+
+/*3- start leftbar-chat */
+#chat-block{
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+#chat-block .title{
+  background: #8dc63f;
+  padding: 5px 20px;
+  width: 70%;
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+img.profile-photo{
+  height: 58px;
+  width: 58px;
+  border-radius: 50%;
+}
+
+img.profile-photo-lg{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+img.profile-photo-md{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+img.profile-photo-sm{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+img.profile-photo-xs{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+ul.online-users{
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+ul.online-users li{
+  list-style: none;
+  position: relative;
+  margin: 13px auto !important;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+ul.online-users li span.online-dot{
+  background: linear-gradient(to bottom, rgba(141,198,63, 1), rgba(0,148,68, 1));
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -6px;
+  border: 2px solid #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* end leftbar-chat */
+
+
+/*.............................................end left side..........................................................*/
+
+
+/*..................................start publish............................................................*/
+
+.create-post{
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f2f2;
+}
+
+.create-post .form-group{
+  margin-bottom: 0;
+  display: inline-flex;
+}
+
+.create-post .form-group img.profile-photo-md{
+  margin-right: 10px;
+}
+
+.create-post .tools{
+  padding: 8px 33px 0px 0px;
+
+}
+
+.create-post .tools ul.publishing-tools{
+  display: inline-flex;
+  padding-right: 10px;
+  justify-content: center;
+}
+
+.create-post .tools ul.publishing-tools li{
+  padding: 5px;
+  padding-right: 10px;
+}
+
+.create-post .tools ul.publishing-tools li a{
+  color: #6d6e71;
+  font-size: 18px;
+}
+
+.create-post .tools ul.publishing-tools li a:hover{
+  color: #27aae1;
+}
+
+/*..................................end publish............................................................*/
+
+
+/*.................................start main.................................................................*/
+
+/*==================================================
+  Post Contents CSS
+  ==================================================*/
+
+  .post-content{
+    background: #f8f8f8;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .post-content img.post-image, video.post-video, .google-maps{
+    width: 100%;
+    height: auto;
+  }
+
+  .post-content .google-maps .map{
+    height: 300px;
+  }
+
+  .post-content .post-container{
+    padding: 20px;
+  }
+
+  .post-content .post-container .post-detail{
+    margin-left: 65px;
+    position: relative;
+  }
+
+  .post-content .post-container .post-detail .post-text{
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .post-content .post-container .post-detail .reaction{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .post-content .post-container .post-detail .post-comment{
+    display: inline-flex;
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .post-content .post-container .post-detail .post-comment img.profile-photo-sm{
+    margin-right: 10px;
+  }
+
+  .post-content .post-container .post-detail .post-comment .form-control{
+    height: 30px;
+    box-shadow: none;
+    margin: 7px 0;
+    min-width: 0;
+  }
+
+/*.................................end main.................................................................*/
+
+
+/*..................................start right side............................................................*/
+.static{
+  position: static;
+}
+
+.suggestions{
+  position:fixed !important;
+  padding-left: 30px;
+
+
+}
+
+.follow-user{
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.follow-user div{
+  margin-left: 20px;
+  position: relative;
+}
+
+.follow-user div::after{
+  content: "";
+  background: none;
+  border-top: 1px solid #f1f2f2;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+}
+
+.follow-user div,a{
+  text-decoration: none;
+}
+
+img.profile-photo-sm{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+ h4.grey{
+  color: #6d6e71;
+  margin: 0 auto 20px;
+}
+
+
+/*..................................end right side............................................................*/
+
+
+
+
+
+
+
+
+/*..................................start footer...........................................................*/
+
+  #footer{
+    background: #fff;
+    position: relative;
+  }
+
+  #footer::before{
+    content: "";
+    background: linear-gradient(to right, #ffffff 0%,#53cbf1 50%,#ffffff 100%);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+  }
+
+  .footer-wrapper{
+    padding: 50px 0;
+    float: left;
+    width: 100%;
+  }
+
+  .footer-wrapper h6{
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  img.footer-logo{
+    margin-bottom: 20px;
+  }
+
+  ul.social-icons{
+    margin: 0;
+  }
+
+  ul.social-icons li{
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #f1f2f2;
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+  }
+
+  ul.social-icons li a{
+    color: #6d6e71;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  ul.social-icons li a:hover{
+    color: #27aae1;
+    transition: all 1s;
+  }
+
+  ul.footer-links li{
+    line-height: 25px;
+  }
+
+  ul.footer-links li a{
+    color: #6d6e71;
+  }
+
+  ul.footer-links li a:hover{
+    color: #27aae1;
+  }
+
+  ul.contact{
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.contact li{
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f2f2;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  ul.contact li i{
+    font-size: 18px;
+    margin-right: 20px;
+    color: #27AAE1;
+  }
+
+  .copyright{
+    background: #231F20;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0 4px;
+  }
+
+
+/*..................................end footer...........................................................*/
+
+
+
